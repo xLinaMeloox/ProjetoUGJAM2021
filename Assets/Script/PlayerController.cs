@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-  public   Rigidbody2D rb;
+    public Rigidbody2D rb;
     public float moveSpeed = 5;
     Vector2 moveDirection;
 
+    bool podeMovimentar = false;
     void Update()
     {
-        //rb = GetComponent<Rigidbody2D>();
+        if (!podeMovimentar)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                podeMovimentar = true;
+                Debug.Log("Clicou para habilitar controle");
+            }
+            else
+            {
+                return;
+            }
+        }
+
         ProcessInputs();
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         Move();
-
     }
 
 
@@ -34,4 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
+
+
 }
+

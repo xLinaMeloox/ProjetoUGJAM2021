@@ -16,9 +16,22 @@ using UnityEngine.UI;
     private string[] sentenses;
     private int index;
 
-    public Life_Player vida;
+    public GameObject vida;
 
-    
+    private void Start()
+    {
+        //var objVida = GameObject.Find("comidaObjeto");
+        //if (objVida == null)
+        //{
+        //    Debug.Log("deu bosta");
+        //}
+        //else
+        //{
+        //    vida = objVida;
+        //}
+
+
+    }
 
     public void Speech(Sprite p, string[] txt, string actorName)
     {
@@ -57,10 +70,9 @@ using UnityEngine.UI;
                 speechText.text = "";
                 index = 0;
                 dialogieObj.SetActive(false);
-
+                vida.gameObject.SetActive(true);
 
             }
-                vida.gameObject.SetActive(true);
         }
     }
 
