@@ -9,6 +9,7 @@ public class Coletavel : MonoBehaviour
     public bool isCollected = false;
 
     public Slider barraComida;
+    public Slider barraLixo;
 
     //public PostProcessAttribute attribute;
     //public ColorGrading _Saturarion;
@@ -31,6 +32,7 @@ public class Coletavel : MonoBehaviour
         isCollected = true;
         Destroy(gameObject);
         barraComida.value += 10;
+        barraLixo.value += 5;
         //_Saturarion.saturation.value -= 10;
         
 

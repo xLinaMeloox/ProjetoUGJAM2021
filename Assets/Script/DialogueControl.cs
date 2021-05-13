@@ -18,20 +18,9 @@ using UnityEngine.UI;
 
     public GameObject vida;
 
-    private void Start()
-    {
-        //var objVida = GameObject.Find("comidaObjeto");
-        //if (objVida == null)
-        //{
-        //    Debug.Log("deu bosta");
-        //}
-        //else
-        //{
-        //    vida = objVida;
-        //}
 
 
-    }
+
 
     public void Speech(Sprite p, string[] txt, string actorName)
     {
