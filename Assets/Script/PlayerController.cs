@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,17 +12,23 @@ public class PlayerController : MonoBehaviour
     bool podeMovimentar = false;
     public Animator anim;
     public float speed;
+    //public Text texto;
+    [SerializeField] Text text;
 
-
+    private void Start()
+    {
+       
+    }
     void Update()
     {
         if (!podeMovimentar)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                
                 podeMovimentar = true;
-                //Debug.Log("Clicou para habilitar controle");
+               
+                
             }
             else
             {
